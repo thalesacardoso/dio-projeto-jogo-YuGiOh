@@ -9,7 +9,7 @@ DATA:
 @import url('./reset.css');
 
 /* IMPORTA A FONTE DO GOOGLE */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 * {
    font-size: 16px;
@@ -18,4 +18,132 @@ DATA:
 
 body {
    background-color: lightblue;
+}
+
+.bg-video {
+   position: absolute;
+   z-index: -2;
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+}
+
+.bg-video::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   background: linear-gradient(90deg,
+         rgba(0, 0, 0, 1) 0%,
+         rgba(0, 0, 0, 0.8) 50%,
+         rgba(0, 0, 0, 1) 100%);
+}
+
+.bg-video .video {
+   height: 100vh;
+}
+
+.container {
+   position: relative;
+   z-index: 3;
+   display: flex;
+   height: 100vh;
+}
+
+.container__left {
+   width: 35%;
+   min-width: 300px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   background-color: red;
+}
+
+.container__right {
+   width: 65%;
+}
+
+.score_box {
+   padding: 30px;
+   background-color: #FFF;
+}
+
+.frame {
+   border: 3px solid #000;
+   border-radius: 5px;
+}
+
+.card_details {
+   background-color: #fff;
+   padding: 1rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   height: 6rem;
+   width: 100%;
+}
+
+#card-name {
+   font-size: 0.8rem;
+}
+
+#card-type {
+   font-size: 1rem;
+}
+
+.card-box__container {
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 0.3rem;
+}
+
+.card-versus {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding-top: 0.2rem;
+   height: 300px;
+}
+
+.versus-top,
+.versus-bottom {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.versus-top {
+   gap: 1rem;
+}
+
+.versus-bottom {
+   margin-top: 1rem;
+}
+
+#next-duel {
+   display: none;
+}
+
+.card-box {
+   height: 9rem;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-around;
+}
+
+.card-infield {
+   height: 11.2rem;
+   width: 8rem;
+   border-radius: 8px;
 }
