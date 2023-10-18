@@ -54,19 +54,51 @@ const cardData = [
 
 const playerSides = {
    player1: "player-cards",
-   computer: "computer-cards"
+   playerBox: document.getElementById("player-cards"),
+   computer: "computer-cards",
+   computerBox: document.getElementById("computer-cards"),
+}
+
+async function removeAllCardsImage(){
+   let cards = playerSides.playerBox;
+   // Seleciona todas as tags img de dentro dos cards acima
+   let img = cards.querySelectorAll("img");
+   img.forEach((img) => {
+      // remove todas os elementos
+      img.remove();
+   })
+
+   cards = playerSides.computerBox;
+   // Seleciona todas as tags img de dentro dos cards acima
+   img = cards.querySelectorAll("img");
+   img.forEach((img) => {
+      // remove todas os elementos
+      img.remove();
+   })
+   
 }
 
 
 async function setCardsField(id) {
+   await removeAllCardsImage();
+
+   let computerCardId = await getRandomCardId();
+
+   state.fieldCards.player.style.display  = "block";
+   state.fieldCards.computer.style.display  = "block";
+
+   state.fieldCards.player.src = cardData[id].img;
+   state.fieldCards.computer.src = cardData[computerCardId].img;
+ 
+   let duelResults = await checkDuelResults(id , computerCardId)
 
 }
 
 
 async function drawSelectCard(id) {
-   state.cardSprites.avatar.src = cardData[id].img
-   state.cardSprites.name.innerText = cardData[id].name
-   state.cardSprites.type.innerText = cardData[id].type
+   state.cardSprites.avatar.src = cardData[id].img;
+   state.cardSprites.name.innerText = cardData[id].name;
+   state.cardSprites.type.innerText = cardData[id].type;
 }
 
 
