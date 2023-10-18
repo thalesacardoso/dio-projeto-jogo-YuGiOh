@@ -20,6 +20,20 @@ body {
    background-color: lightblue;
 }
 
+
+.container {
+   position: relative;
+   z-index: 3;
+   display: flex;
+   height: 100vh;
+}
+
+
+
+
+
+
+/****************** VIDEO DE FUNDO *****************************/
 .bg-video {
    position: absolute;
    z-index: -2;
@@ -48,12 +62,8 @@ body {
    height: 100vh;
 }
 
-.container {
-   position: relative;
-   z-index: 3;
-   display: flex;
-   height: 100vh;
-}
+
+/****************** STYLE LEFT *****************************/
 
 .container__left {
    width: 35%;
@@ -65,10 +75,6 @@ body {
    background-color: red;
 }
 
-.container__right {
-   width: 65%;
-}
-
 .score_box {
    padding: 30px;
    background-color: #FFF;
@@ -77,6 +83,10 @@ body {
 .frame {
    border: 3px solid #000;
    border-radius: 5px;
+}
+
+.menu_avatar img {
+   height: 250px;
 }
 
 .card_details {
@@ -98,12 +108,40 @@ body {
    font-size: 1rem;
 }
 
+.card {
+   transition: transform 0.2s;
+}
+
+.card:hover {
+   transform: scale(1.2);
+}
+
+
+/****************** STYLE RIGHT *****************************/
+
+.container__right {
+   width: 65%;
+}
+
 .card-box__container {
    height: 100vh;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
    padding: 0.3rem;
+}
+
+.card-box {
+   height: 9rem;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-around;
+}
+
+.card-box img {
+   height: 100%;
 }
 
 .card-versus {
@@ -133,17 +171,13 @@ body {
    display: none;
 }
 
-.card-box {
-   height: 9rem;
-   width: 100%;
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   justify-content: space-around;
-}
-
 .card-infield {
    height: 11.2rem;
    width: 8rem;
    border-radius: 8px;
+}
+
+.card-infield img {
+   height: 180px;
+   width: 125px;
 }
