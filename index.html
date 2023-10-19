@@ -2,7 +2,7 @@
 DESENVOLVEDOR: Thales Cardoso
 GITHUB: https://github.com/thalesacardoso
 LINKEDIN: https://www.linkedin.com/in/thalesacardoso/
-DATA: 
+DATA: 19/10/2023
 -->
 
 <!DOCTYPE html>
@@ -15,7 +15,7 @@ DATA:
    <!-- framework -->
    <link rel="stylesheet" href="./src/styles/buttons.css">
    <link rel="stylesheet" href="./src/styles/containers_and_frames.css">
-   
+
    <!-- favicon -->
    <link rel="shortcut icon" href="./src/assets/favicon/Favicon.ico" type="image/x-icon">
 
@@ -26,10 +26,13 @@ DATA:
 </head>
 
 <body>
+
+   <!-- MÚSICA DE FUNDO -->
    <audio id="bgm" loop>
       <source src="./src/assets/audios/egyptian_duel.mp3" type="audio/mp3">
    </audio>
 
+   <!-- VÍDEO DE FUNDO -->
    <div class="bg-video">
       <video autoplay loop muted class="video">
          <source src="./src/assets/video/yugi.mp4" type="video/mp4">
@@ -59,24 +62,20 @@ DATA:
 
       <!-- início container right -->
       <div class="container__right">
-
          <div class="card-box__container">
 
             <!-- início card box computer -->
-            <div class="card-box framed" id="computer-cards">
-
-            </div>
+            <div class="card-box framed" id="computer-cards"> </div>
             <!-- fim card box computer -->
 
 
+            <!-- início centro do tabuleiro -->
             <div class="card-versus">
                <div class="versus-top">
                   <div class="card-infield">
                      <img id="player-field-card">
                   </div>
-
                   <img src="./src/assets/icons/millenium2.png" height="100px">
-
                   <div class="card-infield">
                      <img id="computer-field-card">
                   </div>
@@ -86,20 +85,18 @@ DATA:
                   <button id="next-duel" class="rpgui-button" onclick="resetDuel()">Ganhou</button>
                </div>
             </div>
+            <!-- Fim centro do tabuleiro -->
 
 
             <!-- início card box player -->
-            <div class="card-box framed" id="player-cards">
-
-            </div>
+            <div class="card-box framed" id="player-cards"> </div>
             <!-- fim card box player -->
+
          </div>
       </div>
       <!-- Fim container right -->
 
    </div>
-
-
 
 
    <!-- Javascript-->
