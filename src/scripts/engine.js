@@ -142,9 +142,18 @@ async function drawCards(cardNumbers, fieldSide) {
    }
 }
 
+function tocarMusica(){
+   const bgm = document.getElementById('bgm');
+   bgm.play();
+   bgm.volume = 1
+}
+
+
 function init() {
    drawCards(5, playerSides.player1);
    drawCards(5, playerSides.computer);
+
+   tocarMusica()
 }
 
 

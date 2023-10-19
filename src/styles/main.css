@@ -17,9 +17,15 @@ DATA:
 }
 
 body {
-   background-color: lightblue;
+   cursor: url('../assets/cursor/yugicursor.png'), default;
 }
 
+a,
+a:hover,
+button,
+button:hover {
+   cursor: url('../assets/cursor/yamiyugicursorGLOW.png');
+}
 
 .container {
    position: relative;
@@ -27,11 +33,6 @@ body {
    display: flex;
    height: 100vh;
 }
-
-
-
-
-
 
 /****************** VIDEO DE FUNDO *****************************/
 .bg-video {
